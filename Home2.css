@@ -1,0 +1,271 @@
+body {
+    background-color: #747474;
+}
+
+#wrapper {
+    margin: 1.5rem auto;
+    width: 75rem;
+    padding: 0px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.5rem;
+}
+
+/* Font Import */
+@font-face {
+    font-family: 'Shadow';
+    src: url(LondrinaShadow-Regular.ttf);
+}
+
+/* Header */
+header {
+    grid-column: span 12;
+    background-image: url(Header.png);
+    background-repeat: no-repeat;
+    height: 15.438rem;
+}
+
+/* Title */
+h1 {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    text-align: center;
+    font-size: 5.625rem;
+    padding-top: 1.25rem;
+    font-family: 'Shadow';
+}
+
+h1 a:link, h1 a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+h1:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 60.938rem;
+    padding-top: 1.25rem;
+    border-bottom: 0.313rem solid black;
+}
+
+/* Navigation */
+nav {
+    grid-column-end: 7;
+    grid-column-start: 2;
+    font-size: 2.5rem;
+    padding-top: 4.688rem;
+    font-family: 'Shadow';
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    background-color: #747474;
+    color: white;
+}
+
+nav li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 1.563rem;
+    height: 3.438rem;
+    text-align: center;
+    margin-bottom: 0.938rem;
+}
+
+nav a {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    background-color: darkred;
+    width: 30rem;
+    color: white;
+    transition: background-color 1.0s, width 2.0s, color 2.0s;
+}
+
+nav a:hover {
+    background-color: red;
+    box-shadow: 0.625rem 0.625rem 0.625rem #999;
+    color: black;
+}
+
+/* Main Image */
+#mainimg {
+    width: 70%;
+    grid-column: span 5;
+    padding-top: 3.438rem;
+    padding-left: 6.25rem;
+    margin-bottom: 1.875rem;
+}
+
+/* Main Section */
+main {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+main img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+
+h2 {
+    font-family: 'Shadow';
+}
+
+/* Articles */
+article {
+    grid-column: span 3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Iframe */
+iframe {
+    grid-column: span 12;
+    grid-column-start: 3;
+    grid-column-end: 11;
+    align-content: center;
+    margin-top: 0.625rem;
+    padding-top: 1.5rem;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #wrapper {
+        width: 90%;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h1:after {
+        width: 90%;
+    }
+
+    nav {
+        grid-column: span 8;
+        font-size: 2rem;
+        padding-top: 3rem;
+    }
+
+    nav a {
+        width: 25rem;
+    }
+
+    #mainimg {
+        width: 80%;
+        padding-left: 3rem;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    iframe {
+        grid-column-start: 2;
+        grid-column-end: 8;
+    }
+}
+
+@media (max-width: 768px) {
+    #wrapper {
+        width: 95%;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    nav {
+        grid-column: span 6;
+        font-size: 1.8rem;
+        padding-top: 2rem;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    #mainimg {
+        width: 100%;
+        padding-left: 0;
+        grid-column: span 6;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    iframe {
+        grid-column-start: 1;
+        grid-column-end: 7;
+    }
+}
+
+@media (max-width: 480px) {
+    #wrapper {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    nav {
+        grid-column: span 1;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav li a {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    #mainimg {
+        width: 100%;
+        grid-column: span 1;
+        padding: 0;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-column: span 1;
+    }
+
+    article {
+        grid-column: span 1;
+        font-family: 'Shadow';
+    }
+
+    iframe {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+
